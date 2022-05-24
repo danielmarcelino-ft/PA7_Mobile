@@ -1,7 +1,0 @@
-{
-  "name": "Photo Gallery NG Capacitor",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
