@@ -19,8 +19,13 @@ export default StyleSheet.create(
             
         },
         Monitor: {
-            backgroundColor: '#green',
+            backgroundColor: 'green',
+            
+        },
+        TextoGeral: {
+            color: 'white',
         }
+
         
 
     }
