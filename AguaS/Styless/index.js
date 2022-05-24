@@ -18,6 +18,9 @@ export default StyleSheet.create(
             marginTop: 20,
             
         },
+        Monitor: {
+            backgroundColor: '#green',
+        }
         
 
     }
