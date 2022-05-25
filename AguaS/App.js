@@ -41,7 +41,7 @@ function Monitor() {
 
   return (
     <View style={Styless.container}>
-      <Text style={Styless.TextoGeral}> Monitorrrrrrrrrrrrrrr</Text>
+      <Text style={Styless.TextoGeral}></Text>
       <Text>Consumo dos últimos 12 meses</Text>
       <LineChart
         data={{
@@ -49,35 +49,35 @@ function Monitor() {
           datasets: [
             {
               data: [
-                Math.random() * 100,
-                Math.random() * 100,
-                Math.random() * 100,
-                Math.random() * 100,
-                Math.random() * 100,
-                Math.random() * 100
+                Math.random() * 120,
+                Math.random() * 120,
+                Math.random() * 120,
+                Math.random() * 120,
+                Math.random() * 120,
+                Math.random() * 120
               ]
             }
           ]
         }}
         width={Dimensions.get("window").width * 0.9} // from react-native
         height={Dimensions.get("window").height * 0.8}
-        yAxisLabel="$"
-        yAxisSuffix="k"
+        yAxisLabel="R$"
+        yAxisSuffix=""
         yAxisInterval={1} // optional, defaults to 1
         chartConfig={{
           backgroundColor: "white",
-          backgroundGradientFrom: "#fb8c00",
-          backgroundGradientTo: "#ffa726",
+          backgroundGradientFrom: "#F0FFFF",
+          backgroundGradientTo: "#F5FFFA",
           decimalPlaces: 2, // optional, defaults to 2dp
-          color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-          labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+          color: (opacity = 1) => `rgba(0, 0, 255, ${opacity})`,
+          labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
           style: {
             borderRadius: 16
           },
           propsForDots: {
-            r: "6",
+            r: "5",
             strokeWidth: "2",
-            stroke: "#ffa726"
+            stroke: "blue"
           }
         }}
         bezier
@@ -113,9 +113,37 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Inicio" component={Inicio} />
-        <Stack.Screen name="Monitor" component={Monitor} />
-        <Stack.Screen name="RegistrarConsumo" component={RegistrarConsumo} />
+        <Stack.Screen name="Inicio" component={Inicio}  options={{
+          title: 'Início ',
+          headerStyle: {
+            backgroundColor: '#1E90FF',
+          },headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+          }}
+        />
+        <Stack.Screen name="Monitor" component={Monitor}  options={{
+          title: 'Monitor',
+          headerStyle: {
+            backgroundColor: '#1E90FF',
+          },headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+          }}
+        />
+        <Stack.Screen name="RegistrarConsumo" component={RegistrarConsumo}  options={{
+          title: 'My home',
+          headerStyle: {
+            backgroundColor: '#1E90FF',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

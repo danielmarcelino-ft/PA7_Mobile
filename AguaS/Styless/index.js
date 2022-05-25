@@ -7,7 +7,7 @@ export default StyleSheet.create(
         //no titulo colocar background color = #000022
         container: {
             flex: 1, 
-            backgroundColor: '#AFEEEE',
+            backgroundColor: '#F8F8FF',
             alignItems: 'center',
             justifyContent: 'center',
         },
@@ -19,12 +19,12 @@ export default StyleSheet.create(
             
         },
         Monitor: {
-           backgroundColor: 'gray',
+           backgroundColor: '#AFEEEE',
            
             
         },
         TextoGeral: {
-            color: 'white',
+            color: 'darkblue',
         },
         bottaoEstiloso: {
             color: 'white',
