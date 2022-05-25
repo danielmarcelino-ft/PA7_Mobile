@@ -14,7 +14,7 @@ Desenvolvimento de Aplicações para Mobile e Projeto Aplicado à Eng. de Comput
 1 – TELA INICIAL 
  Progresso atual: Botões estilizados aplicados, cor de fundo definida e botões com navegação funcionais. 
 
-image.png
+![image](https://user-images.githubusercontent.com/28276248/170159394-ffce401f-842a-4ab7-9c14-12aac2f3e72b.png)
 
 
 
@@ -23,7 +23,8 @@ image.png
  Progresso atual: Desenvolvimento não iniciado.
  Falta a possibilidade de acessar a camera do celular e faltam inputs para cadastrar as informações de consumo de água e custo.
 
-image.png
+![image](https://user-images.githubusercontent.com/28276248/170159324-4fef1199-bf41-4ab1-ae8a-63b6ca3ecde6.png)
+
 
 
 
@@ -31,7 +32,9 @@ image.png
 3 – TELA MÉDIA DE CONSUMO 
 Progresso atual: Gráfico definido de acompanhamento com números aleatórios para visualização.
 Falta pegar informações que serão cadastradas na tela "REGISTRAR CONSUMO".
-image.png
+
+![image](https://user-images.githubusercontent.com/28276248/170159440-b2863394-02ad-4821-b9da-f7285d7d0f30.png)
+
 
 
 Para conseguir rodar o aplicativo:
