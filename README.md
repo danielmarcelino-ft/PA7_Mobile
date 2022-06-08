@@ -30,7 +30,6 @@
 
 
 
-
 3 – TELA MÉDIA DE CONSUMO 
 Progresso atual: Gráfico definido de acompanhamento com números aleatórios para visualização.
 Falta pegar informações que serão cadastradas na tela "REGISTRAR CONSUMO".
@@ -38,14 +37,13 @@ Falta pegar informações que serão cadastradas na tela "REGISTRAR CONSUMO".
 ![image](https://user-images.githubusercontent.com/28276248/170159440-b2863394-02ad-4821-b9da-f7285d7d0f30.png)
 
 
+## Para rodar o aplicativo:
+### Monte o ambiente:
+- Instale o Visual Studio Code. Instalador para Windows pode ser obtido no site oficial.
+- Instale Node.js. Instalador para Windows pode ser obtido no site oficial.
+- Baixe o repositório na máquina local, abra o prompt de comando na pasta raiz do projeto e digite os comandos:
+  - Instalar Expo CLI: "npm install --global expo-cli"
+  - Para plotar gráficos instalar: "npm i react-native-chart-kit"
 
-Para conseguir rodar o aplicativo:
-
-Instalar Node, website oficial possui executável de instalação para sistemas operacionais windows.
-
-Instalar Expo CLI
-npm install --global expo-cli
-
-
-Para plotar gráficos instalar
-npm i react-native-chart-kit
+### Rode o aplicativo:
+No prompt de comando aberto na pasta do projeto, execute o comando ""
