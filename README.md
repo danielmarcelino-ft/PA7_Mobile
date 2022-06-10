@@ -47,3 +47,7 @@ npm install --global expo-cli
 
 Para plotar gráficos instalar
 npm i react-native-chart-kit
+expo install react-native-svg
+
+Para utilizar a camera do celular, instalar expo camera
+expo install expo-camera

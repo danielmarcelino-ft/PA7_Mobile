@@ -10,19 +10,19 @@ import Styless from './Styless';
 //import Main from './src/components/Main';
 //import Monitor from './src/components/Monitor';
 
-import { Dimensions } from "react-native";
+import { Dimensions} from "react-native";
 import {
   LineChart,
-  BarChart,
-  PieChart,
-  ProgressChart,
-  ContributionGraph,
-  StackedBarChart
+  //BarChart,
+  //PieChart,
+ // ProgressChart,
+ // ContributionGraph,
+ // StackedBarChart
 } from "react-native-chart-kit";
 
 
 import { useState, useEffect } from 'react';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, SafeAreaView  } from 'react-native';
 import { Camera, CameraType } from 'expo-camera';
 
 
@@ -99,51 +99,59 @@ function Monitor() {
 }
 
 function RegistrarConsumo() {
+  
+  
+  const [type, setType] = useState(Camera.Constants.Type.back);
+  const [hasPermission, setHasPermission] = useState(null);
+
+  
+  useEffect( () => {
+    (async () => {
+        const {status} = await Camera.requestCameraPermissionsAsync();
+        setHasPermission(status === 'granted');
+      }
+    )  ();
+   }, []
+  );
+
+  if (hasPermission === null){
+       return <View/>
+  }
+ else if (hasPermission === false){
+        return <Text> Camera não autorizada!</Text>
+  }
 
 
   return (
-    <View style={Styless.container}>
-      <Text style={Styless.TextoGeral}>Gostaria de registrar o consumo do mês atual?</Text>
-      {
-      /*
+    //<View style={Styless.container}>
+      //<Text style={Styless.TextoGeral}>Gostaria de registrar o consumo do mês atual?</Text>
+      <SafeAreaView>
+          <Camera style={{flex: 1}} type={type}>
       
-      const [hasPermission, setHasPermission] = useState(null);
-      const [type, setType] = useState(CameraType.back);
 
-      useEffect(() => {
-          (async () => {
-          const { status } = await Camera.requestCameraPermissionsAsync();
-          setHasPermission(status === 'granted');
-          })();
-      }, []);
+      <View style={{flex: 1, backgroundColor: 'transparent', flexDirection: 'row'}}>
+          <TouchableOpacity style={{
+            position: 'absolute',
+            bottom: 20,
+            left: 120,
+          }}
+          onPress={ () => {
+            setType(
+              type === Camera.Constants.Type.back 
+              ? Camera.Constants.Type.front
+              : Camera.Constants.Type.back
+            );
+          }}
+          >
 
-      if (hasPermission === null) {
-                return <View />;
-      }
-      if (hasPermission === false) {
-                return <Text>Sem autorização para acessar a camera</Text>;
-      }
-      return (
-      <View style={styles.container}>
-        <Camera style={styles.camera} type={type}>
-          <View style={styles.buttonContainer}>
-            <TouchableOpacity
-              style={styles.button}
-              onPress={() => {
-                setType(type === CameraType.back ? CameraType.front : CameraType.back);
-              }}>
-              <Text style={styles.text}> Flip </Text>
-            </TouchableOpacity>
-          </View>
-        </Camera>
-      </View>
-      );
-      */
-      }
+          </TouchableOpacity>
+      </ View> 
 
       <StatusBar style="auto" />
-    </View>
-  )
+    </Camera>
+  </SafeAreaView>
+
+  );
 
 
 }
