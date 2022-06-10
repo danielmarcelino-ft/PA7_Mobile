@@ -44,23 +44,10 @@ Falta pegar informações que serão cadastradas na tela "REGISTRAR CONSUMO".
 - Baixe o repositório na máquina local, abra o prompt de comando na pasta raiz do projeto e digite os comandos:
   - Instalar Expo CLI: "npm install --global expo-cli"
   - Para plotar gráficos instalar: "npm i react-native-chart-kit"
+  - expo install react-native-svg
 
-<<<<<<< HEAD
+  Para utilizar a camera do celular, instalar expo camera
+  - expo install expo-camera
 Para conseguir rodar o aplicativo:
 
-Instalar Node, website oficial possui executável de instalação para sistemas operacionais windows.
 
-Instalar Expo CLI
-npm install --global expo-cli
-
-
-Para plotar gráficos instalar
-npm i react-native-chart-kit
-expo install react-native-svg
-
-Para utilizar a camera do celular, instalar expo camera
-expo install expo-camera
-=======
-### Rode o aplicativo:
-No prompt de comando aberto na pasta do projeto, execute o comando ""
->>>>>>> a04eff7cdbfafcd2769877e6e4d2d4f9890f66df
