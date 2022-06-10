@@ -1,14 +1,16 @@
-INTEGRANTES DO GRUPO 
+<pre>
+<br>%===============================================================
+<br>Nome,                            RA,     Turma Mobile, Turma PA
+<br>Daniel Correia Marcelino,        150222, CP110TIN1,    PA038TIN1
+<br>Enrico Pezato Acquaviva Carrano, 150993, CP110TIN1,    PA038TIN1
+<br>Lucas Fernando Basilio da Costa, 173264, CP110TIN1,    PA038TIN1
+<br>Miguel Soares Vieira Neto,       151850, CP110TIN3,    PA038TIN3
+<br>%===============================================================
+</pre>
 
-DANIEL CORREIA MARCELINO – RA - 150222
-ENRICO PEZATO ACQUAVIVA CARRANO – RA 150993
-LUCAS FERNANDO BASILIO DA COSTA – RA 173264
-MIGUEL SOARES – RA 151850
+### Desenvolvimento de Aplicações para Mobile e Projeto Aplicado à Eng. de Computação VII
 
-TURMAS - CP110TIN1 E CP110TIN3 E PA038TIN1 E PA038TIN3
-
-Desenvolvimento de Aplicações para Mobile e Projeto Aplicado à Eng. de Computação VII – RELATÓRIO DE PROGRESSO (Aplicativo ÁguaS)
-
+# Aplicativo ÁguaS
 
 
 1 – TELA INICIAL 
@@ -28,7 +30,6 @@ Desenvolvimento de Aplicações para Mobile e Projeto Aplicado à Eng. de Comput
 
 
 
-
 3 – TELA MÉDIA DE CONSUMO 
 Progresso atual: Gráfico definido de acompanhamento com números aleatórios para visualização.
 Falta pegar informações que serão cadastradas na tela "REGISTRAR CONSUMO".
@@ -36,7 +37,15 @@ Falta pegar informações que serão cadastradas na tela "REGISTRAR CONSUMO".
 ![image](https://user-images.githubusercontent.com/28276248/170159440-b2863394-02ad-4821-b9da-f7285d7d0f30.png)
 
 
+## Para rodar o aplicativo:
+### Monte o ambiente:
+- Instale o Visual Studio Code. Instalador para Windows pode ser obtido no site oficial.
+- Instale Node.js. Instalador para Windows pode ser obtido no site oficial.
+- Baixe o repositório na máquina local, abra o prompt de comando na pasta raiz do projeto e digite os comandos:
+  - Instalar Expo CLI: "npm install --global expo-cli"
+  - Para plotar gráficos instalar: "npm i react-native-chart-kit"
 
+<<<<<<< HEAD
 Para conseguir rodar o aplicativo:
 
 Instalar Node, website oficial possui executável de instalação para sistemas operacionais windows.
@@ -51,3 +60,7 @@ expo install react-native-svg
 
 Para utilizar a camera do celular, instalar expo camera
 expo install expo-camera
+=======
+### Rode o aplicativo:
+No prompt de comando aberto na pasta do projeto, execute o comando ""
+>>>>>>> a04eff7cdbfafcd2769877e6e4d2d4f9890f66df
