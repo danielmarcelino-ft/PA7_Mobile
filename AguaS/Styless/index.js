@@ -25,6 +25,7 @@ export default StyleSheet.create(
         },
         TextoGeral: {
             color: 'darkblue',
+            margin: 20,
         },
         bottaoEstiloso: {
             color: 'white',

@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, Text, Button, Modal, Image } from 'react-native';
+import { StyleSheet, View, Text, TextInput, Button, Modal, Image } from 'react-native';
 import Styless from './Styless';
 //import Title from './src/components/Title';
 //import Main from './src/components/Main';
@@ -38,7 +38,8 @@ function Inicio({ navigation }) {
     <View style={Styless.container}>
       <View style={Styless.startMainMenu}>
         <Button style={Styless.bottaoEstiloso} title='Média de Consumo' onPress={() => navigation.navigate('Monitor')} ></Button>
-        <Button style={Styless.bottaoEstiloso} title='Registrar Consumo' onPress={() => navigation.navigate('RegistrarConsumo')}></Button>
+        <Button style={Styless.bottaoEstiloso} title='Gravar Dados' onPress={() => navigation.navigate('GravarDados')}></Button>
+        <Button style={Styless.bottaoEstiloso} title='Tirar Foto' onPress={() => navigation.navigate('RegistrarConsumo')}></Button>
         <StatusBar style="auto" />
       </View>
     </View>
@@ -48,6 +49,7 @@ function Inicio({ navigation }) {
 }
 
 function Monitor() {
+ 
 
 
   return (
@@ -197,121 +199,42 @@ const styles = StyleSheet.create({
   },
 });
 
-//function RegistrarConsumo() {
 
-  // const camRef = useRef(null);
-
-  // const [capturadaFoto, setcapturadaFoto] = useState(null);
-  // const [open, setOpen] = useState(false);
-
-  // const [type, setType] = useState(Camera.Constants.Type.back);
-  // const [hasPermission, setHasPermission] = useState(null);
+function GravarDados({ navigation }) {
 
 
-  // useEffect(() => {
-  //   (async () => {
-  //     const { status } = await Camera.requestCameraPermissionsAsync();
-  //     setHasPermission(status === 'granted');
-  //   }
-  //   )();
-  // }, []
-  // );
-
-  // if (hasPermission === null) {
-  //   return <View />
-  // }
-  // else if (hasPermission === false) {
-  //   return <Text> Camera não autorizada!</Text>
-  // }
-
-  // const tirarFoto = async () => {
-  //   try {
-  //     const data = await camera.takePictureAsync()
-  //     setcapturadaFoto(data.uri)
-  //     console.log(photo)
-  //     setPreviewVisible(true)
-  //     //setStartCamera(false)
-  //     setCapturedImage(data)
-  //   } catch (error) {
-  //     console.log(error)
-  //   }
-
-  // }
-  // // async function tirarFoto(){
-  // //   if(camRef){
-  // //     const data = await camRef.current.takePictureAsync();
-  // //     setcapturadaFoto(data.uri);
-  // //     setOpen(true);
-  // //     console.log(data);
-  // //   }
-  // // }
+  const [valor, setValor] = useState(null)
 
 
 
-  // return (
-  //   //<View style={Styless.container}>
-  //   //<Text style={Styless.TextoGeral}>Gostaria de registrar o consumo do mês atual?</Text>
-  //   <SafeAreaView>
-  //     <Camera style={{ flex: 1 }} type={'back'} ref={(r) => { camera = r }}>
+  return (
+    <View style={Styless.container}>
+
+      <Text style={Styless.TextoGeral}>Digite o valor em reais: Exemplo: 200</Text>
+      <TextInput
+        style={{
+          borderWidth: 1,
+          borderColor: 'blue',
+          width: 202,
+          keyboardType: 'decimal-pad',
+          maxLengh: 8
+        }}
+        value={valor}
+        
+        onChangeText={setValor}
+      />
+
+      <Text>{valor}</Text>
+     
+      
+
+    </View>
+
+  )
 
 
-  //       <View style={{ flex: 1, backgroundColor: 'transparent', flexDirection: 'row' }}>
-  //         <TouchableOpacity style={{
-  //           position: 'absolute',
-  //           bottom: 20,
-  //           left: 120,
-  //         }}
-  //           onPress={() => {
-  //             setType(
-  //               type === Camera.Constants.Type.back
-  //                 ? Camera.Constants.Type.front
-  //                 : Camera.Constants.Type.back
-  //             );
-  //           }}
-  //         >
+}
 
-  //           <Text style={Styless.TextoGeral}>Trocar</Text>
-
-  //         </TouchableOpacity>
-  //       </ View>
-
-  //     </Camera>
-
-  //     <TouchableOpacity style={Styless.bottaoEstiloso} onPress={tirarFoto}>
-  //       <Text style={Styless.TextoGeral}>Camera</Text>
-  //     </TouchableOpacity>
-
-
-  //     {capturadaFoto &&
-  //       <Modal animationType='slide'
-  //         transparent={false}
-  //         visible={open}
-  //       >
-  //         <View>
-  //           <TouchableOpacity style={Styless.bottaoEstiloso} onPress={() => setOpen(false)}>
-  //             <Text style={color = "#FF0000"}>window-close</Text>
-  //           </TouchableOpacity>
-
-
-  //           <Image style={{ width: '100%', height: 300, borderRadius: 20 }}
-  //             source={{ uri: capturadaFoto }}
-  //           />
-
-
-
-
-
-  //         </View>
-  //       </Modal>
-  //     }
-
-
-  //   </SafeAreaView>
-
-  // );
-
-
-//}
 
 const Stack = createNativeStackNavigator();
 
@@ -340,7 +263,18 @@ export default function App() {
         }}
         />
         <Stack.Screen name="RegistrarConsumo" component={RegistrarConsumo} options={{
-          title: 'My home',
+          title: 'Registrar Consumo',
+          headerStyle: {
+            backgroundColor: '#1E90FF',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}
+        />
+        <Stack.Screen name="GravarDados" component={GravarDados} options={{
+          title: 'Gravar Dados',
           headerStyle: {
             backgroundColor: '#1E90FF',
           },
