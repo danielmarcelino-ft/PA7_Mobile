@@ -48,6 +48,9 @@ Falta pegar informações que serão cadastradas na tela "REGISTRAR CONSUMO".
 
   Para utilizar a camera do celular, instalar expo camera
   - expo install expo-camera
+  - expo install expo-image-picker
+  - expo install expo-media-library
+  
 Para conseguir rodar o aplicativo:
-
+ npm run start
 
