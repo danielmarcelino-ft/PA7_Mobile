@@ -49,7 +49,6 @@ function Inicio({ navigation }) {
 }
 
 function Monitor() {
- 
 
 
   return (
@@ -220,13 +219,13 @@ function GravarDados({ navigation }) {
           maxLengh: 8
         }}
         value={valor}
-        
+
         onChangeText={setValor}
       />
 
       <Text>{valor}</Text>
-     
-      
+
+   
 
     </View>
 
@@ -235,6 +234,12 @@ function GravarDados({ navigation }) {
 
 }
 
+function SalvarDados(valor) {
+  var lista = []
+  lista = lista.concat(valor)
+  console.log(lista)
+
+}
 
 const Stack = createNativeStackNavigator();
 
