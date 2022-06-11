@@ -26,7 +26,7 @@ import { useState, useEffect, useRef } from 'react';
 import { TouchableOpacity, SafeAreaView } from 'react-native';
 import { Camera, CameraType } from 'expo-camera';
 import * as ImagePicker from 'expo-image-picker';
-
+import * as MediaLibrary from 'expo-media-library';
 
 
 let camera
@@ -141,12 +141,13 @@ function RegistrarConsumo() {
       console.log(data)
       console.log(data.uri);
       setImageUri(data.uri);
+      await MediaLibrary.saveToLibraryAsync(data.uri);
     }
   };
 
   const pickImage = async () => {
     let result = await ImagePicker.launchImageLibraryAsync({
-      mediaTypes: ImagePicker.MediaTypeOptions.Images,
+      mediaTypes: ImagePicker.MediaTypeOptions.All,
       allowsEditing: true,
       aspect: [1, 1],
       quality: 1,
